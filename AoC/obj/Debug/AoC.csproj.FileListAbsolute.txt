@@ -1,0 +1,6 @@
+C:\Users\robin\GitHub\AdventOfCode\AoC\obj\Debug\AoC.csprojAssemblyReference.cache
+C:\Users\robin\GitHub\AdventOfCode\AoC\obj\Debug\AoC.csproj.CoreCompileInputs.cache
+C:\Users\robin\GitHub\AdventOfCode\AoC\bin\Debug\AoC.dll
+C:\Users\robin\GitHub\AdventOfCode\AoC\bin\Debug\AoC.pdb
+C:\Users\robin\GitHub\AdventOfCode\AoC\obj\Debug\AoC.dll
+C:\Users\robin\GitHub\AdventOfCode\AoC\obj\Debug\AoC.pdb

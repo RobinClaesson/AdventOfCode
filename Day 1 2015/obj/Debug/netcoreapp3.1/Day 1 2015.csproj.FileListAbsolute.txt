@@ -1,0 +1,34 @@
+C:\Users\robin\GitHub\AdventOfCode\Day 1\bin\Debug\netcoreapp3.1\Input.txt
+C:\Users\robin\GitHub\AdventOfCode\Day 1\bin\Debug\netcoreapp3.1\Day 1 2015.exe
+C:\Users\robin\GitHub\AdventOfCode\Day 1\bin\Debug\netcoreapp3.1\Day 1 2015.deps.json
+C:\Users\robin\GitHub\AdventOfCode\Day 1\bin\Debug\netcoreapp3.1\Day 1 2015.runtimeconfig.json
+C:\Users\robin\GitHub\AdventOfCode\Day 1\bin\Debug\netcoreapp3.1\Day 1 2015.runtimeconfig.dev.json
+C:\Users\robin\GitHub\AdventOfCode\Day 1\bin\Debug\netcoreapp3.1\Day 1 2015.dll
+C:\Users\robin\GitHub\AdventOfCode\Day 1\bin\Debug\netcoreapp3.1\Day 1 2015.pdb
+C:\Users\robin\GitHub\AdventOfCode\Day 1\bin\Debug\netcoreapp3.1\AoC.IO.dll
+C:\Users\robin\GitHub\AdventOfCode\Day 1\bin\Debug\netcoreapp3.1\AoC.IO.pdb
+C:\Users\robin\GitHub\AdventOfCode\Day 1\obj\Debug\netcoreapp3.1\Day 1 2015.csprojAssemblyReference.cache
+C:\Users\robin\GitHub\AdventOfCode\Day 1\obj\Debug\netcoreapp3.1\Day 1 2015.AssemblyInfoInputs.cache
+C:\Users\robin\GitHub\AdventOfCode\Day 1\obj\Debug\netcoreapp3.1\Day 1 2015.AssemblyInfo.cs
+C:\Users\robin\GitHub\AdventOfCode\Day 1\obj\Debug\netcoreapp3.1\Day 1 2015.csproj.CoreCompileInputs.cache
+C:\Users\robin\GitHub\AdventOfCode\Day 1\obj\Debug\netcoreapp3.1\Day 1 2015.csproj.CopyComplete
+C:\Users\robin\GitHub\AdventOfCode\Day 1\obj\Debug\netcoreapp3.1\Day 1 2015.dll
+C:\Users\robin\GitHub\AdventOfCode\Day 1\obj\Debug\netcoreapp3.1\Day 1 2015.pdb
+C:\Users\robin\GitHub\AdventOfCode\Day 1\obj\Debug\netcoreapp3.1\Day 1 2015.genruntimeconfig.cache
+C:\Users\robin\GitHub\AdventOfCode\Day 1 2015\obj\Debug\netcoreapp3.1\Day 1 2015.csprojAssemblyReference.cache
+C:\Users\robin\GitHub\AdventOfCode\Day 1 2015\obj\Debug\netcoreapp3.1\Day 1 2015.AssemblyInfoInputs.cache
+C:\Users\robin\GitHub\AdventOfCode\Day 1 2015\obj\Debug\netcoreapp3.1\Day 1 2015.AssemblyInfo.cs
+C:\Users\robin\GitHub\AdventOfCode\Day 1 2015\obj\Debug\netcoreapp3.1\Day 1 2015.csproj.CoreCompileInputs.cache
+C:\Users\robin\GitHub\AdventOfCode\Day 1 2015\obj\Debug\netcoreapp3.1\Day 1 2015.dll
+C:\Users\robin\GitHub\AdventOfCode\Day 1 2015\obj\Debug\netcoreapp3.1\Day 1 2015.pdb
+C:\Users\robin\GitHub\AdventOfCode\Day 1 2015\bin\Debug\netcoreapp3.1\Input.txt
+C:\Users\robin\GitHub\AdventOfCode\Day 1 2015\bin\Debug\netcoreapp3.1\Day 1 2015.exe
+C:\Users\robin\GitHub\AdventOfCode\Day 1 2015\bin\Debug\netcoreapp3.1\Day 1 2015.deps.json
+C:\Users\robin\GitHub\AdventOfCode\Day 1 2015\bin\Debug\netcoreapp3.1\Day 1 2015.runtimeconfig.json
+C:\Users\robin\GitHub\AdventOfCode\Day 1 2015\bin\Debug\netcoreapp3.1\Day 1 2015.runtimeconfig.dev.json
+C:\Users\robin\GitHub\AdventOfCode\Day 1 2015\bin\Debug\netcoreapp3.1\Day 1 2015.dll
+C:\Users\robin\GitHub\AdventOfCode\Day 1 2015\bin\Debug\netcoreapp3.1\Day 1 2015.pdb
+C:\Users\robin\GitHub\AdventOfCode\Day 1 2015\bin\Debug\netcoreapp3.1\AoC.dll
+C:\Users\robin\GitHub\AdventOfCode\Day 1 2015\bin\Debug\netcoreapp3.1\AoC.pdb
+C:\Users\robin\GitHub\AdventOfCode\Day 1 2015\obj\Debug\netcoreapp3.1\Day 1 2015.csproj.CopyComplete
+C:\Users\robin\GitHub\AdventOfCode\Day 1 2015\obj\Debug\netcoreapp3.1\Day 1 2015.genruntimeconfig.cache
