@@ -20,7 +20,7 @@ namespace Day_1_2015
                 else floor--;
 
 
-            IO.Output(floor, 1);
+            IO.Output(floor);
 
             Console.WriteLine("Part 2: ");
             floor = 0;
@@ -32,7 +32,7 @@ namespace Day_1_2015
 
                 if (floor == -1)
                 {
-                    IO.Output(i+1, 2);
+                    IO.Output(i+1);
                     break;
                 }
             }

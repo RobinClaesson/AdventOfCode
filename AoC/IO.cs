@@ -28,6 +28,7 @@ namespace AoC
             }
         }
 
+
         public static List<string> InputRows
         {
             get
@@ -49,6 +50,21 @@ namespace AoC
                 return input;
             }
         }
+        public static List<int> InputRows_Int
+        {
+            get
+            {
+                List<string> stringList = InputRows;
+
+                List<int> intList = new List<int>();
+
+                foreach (string s in stringList)
+                    intList.Add(int.Parse(s));
+
+                return intList;
+            }
+        }
+
 
         public static List<string> SplittedInput(char separator)
         {
@@ -68,31 +84,41 @@ namespace AoC
 
 
 
-
-
-        public static void Output(string answer, int part, bool openFile)
+        private static int outputs = 0;
+        private static void ClearOutput()
         {
             string path = "Output.txt";
             StreamWriter writer = new StreamWriter(path, false);
-            writer.Write(answer);
+            writer.Write("");
             writer.Close();
-            Console.WriteLine("Answer part " + part + ": " + answer);
+        }
+        public static void Output(string answer, bool openFile)
+        {
+            if (outputs == 0)
+                ClearOutput();
+            outputs++;
+
+            string path = "Output.txt";
+            StreamWriter writer = new StreamWriter(path, true);
+            writer.WriteLine("Part " + outputs + ": " + answer);
+            writer.Close();
+            Console.WriteLine("Answer part " + outputs + ": " + answer);
 
             if (openFile)
                 Process.Start("notepad.exe", path);
         }
-        public static void Output(string answer, int part)
+        public static void Output(string answer)
         {
-            Output(answer, part, false);
+            Output(answer,  false);
         }
 
-        public static void Output(int answer, int part, bool openFile)
+        public static void Output(int answer,  bool openFile)
         {
-            Output("" + answer, part, openFile);
+            Output("" + answer,  openFile);
         }
-        public static void Output(int answer, int part)
+        public static void Output(int answer)
         {
-            Output("" + answer, part, false);
+            Output("" + answer, false);
         }
     }
 }

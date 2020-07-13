@@ -12,7 +12,7 @@ namespace Day_2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Part 1:");
+            
 
             List<string> input = IO.InputRows;
 
@@ -29,9 +29,7 @@ namespace Day_2
                 paper += 2 * l * w + 2 * w * h + 2 * h * l + Math.Min(l * w, Math.Min(w * h, l * h));
             }
 
-            IO.Output(paper, 1);
-
-            Console.WriteLine("Part 2:");
+            IO.Output(paper);
 
             int ribbon = 0;
 
@@ -48,7 +46,7 @@ namespace Day_2
                 ribbon += 2 * l + 2 * w + 2 * h - 2 * Helper.Max(new int[] { l, w, h }) + l*w*h;
             }
 
-            IO.Output(ribbon, 2);
+            IO.Output(ribbon, false);
 
             Console.ReadKey();
         }

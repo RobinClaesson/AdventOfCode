@@ -13,7 +13,7 @@ namespace Day_3
     {
         static void Main(string[] args)
         {
-
+            
             string input = IO.Input;
 
             //Part 1
@@ -44,7 +44,7 @@ namespace Day_3
                     houses.Add(pos);
             }
 
-            IO.Output(houses.Count, 1);
+            IO.Output(houses.Count);
 
             //Part 2
             Point[] positions = new Point[] { new Point(0, 0), new Point(0, 0) };
@@ -74,7 +74,7 @@ namespace Day_3
 
             }
 
-            IO.Output(houses.Count, 2);
+            IO.Output(houses.Count);
 
             Console.ReadKey();
         }
