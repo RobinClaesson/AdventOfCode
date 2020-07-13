@@ -35,6 +35,7 @@ namespace Day_18
         {
             int updates = 100;
 
+            //Turns on the four corners
             map[0, 0] = 1;
             map[size.Y - 1, 0] = 1;
             map[0, size.X - 1] = 1;
