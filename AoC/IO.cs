@@ -11,6 +11,7 @@ namespace AoC
 {
     public class IO
     {
+        //Straight input
         public static string Input
         {
             get
@@ -28,7 +29,15 @@ namespace AoC
             }
         }
 
+        public static int Input_Int
+        {
+            get
+            {
+                return int.Parse(Input);
+            }
+        }
 
+        //Input by row of text
         public static List<string> InputRows
         {
             get
@@ -66,6 +75,7 @@ namespace AoC
         }
 
 
+        //Input by separation at separator
         public static List<string> SplittedInput(char separator)
         {
             return Input.Split(separator).ToList<string>();
@@ -83,7 +93,25 @@ namespace AoC
         }
 
 
+        //Input by row and separation at row
+        public static List<string[]> InputRowsSplitted(char separator)
+        {
+            List<string> rows = InputRows;
 
+            List<string[]> input = new List<string[]>();
+
+            foreach (string row in rows)
+            {
+                input.Add(row.Split(separator));
+            }
+
+            return input;
+        }
+
+
+
+
+        //Answer outputs in console and to file
         private static int outputs = 0;
         private static void ClearOutput()
         {
@@ -91,6 +119,11 @@ namespace AoC
             StreamWriter writer = new StreamWriter(path, false);
             writer.Write("");
             writer.Close();
+        }
+
+        public static void OpenOutput()
+        {
+            Process.Start("notepad.exe", "Output.txt");
         }
         public static void Output(string answer, bool openFile)
         {
@@ -109,16 +142,72 @@ namespace AoC
         }
         public static void Output(string answer)
         {
-            Output(answer,  false);
+            Output(answer, false);
         }
 
-        public static void Output(int answer,  bool openFile)
+        public static void Output(int answer, bool openFile)
         {
-            Output("" + answer,  openFile);
+            Output("" + answer, openFile);
         }
         public static void Output(int answer)
         {
             Output("" + answer, false);
         }
+
+
+
+        //Logging for debuging etc
+
+        static string logBuffer = "";
+        public static void ClearLogFile()
+        {
+            StreamWriter writer = new StreamWriter("Log.txt", false);
+            writer.Write("");
+            writer.Close();
+        }
+
+        public static void WriteLogToFile(bool append, bool openFile)
+        {
+            StreamWriter writer = new StreamWriter("Log.txt", false);
+            writer.WriteLine(logBuffer);
+            writer.Close();
+
+            logBuffer = "";
+
+            if (openFile)
+                OpenLogFile();
+        }
+
+        public static void WriteLogToFile()
+        {
+            WriteLogToFile(true, false);
+        }
+
+        public static void OpenLogFile()
+        {
+            Process.Start("notepad.exe", "Log.txt");
+        }
+
+
+
+        public static void Log(string log)
+        {
+            if ((logBuffer.Length + log.Length) >= 1073741791)//Max length of a string
+            {
+                WriteLogToFile(false, false);
+            }
+
+            logBuffer += log + "\r\n";
+            
+        }
+
+        public static void Log(int log)
+        {
+            Log("" + log);
+        }
+
+
+
+
     }
 }

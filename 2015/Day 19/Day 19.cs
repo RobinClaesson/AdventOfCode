@@ -11,57 +11,53 @@ namespace Day_19
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             List<string> input = IO.InputRows;
 
-            string inputMed = input[input.Count - 1];
+            string medicine = input[input.Count - 1];
             //Removes the medicine and the empty road before it form the list
             input.RemoveAt(input.Count - 1);
             input.RemoveAt(input.Count - 1);
 
             //Part 1
-            IO.Output(NewMedicines(input, inputMed).Count);
+            IO.Output(NewMedicines(input, medicine).Count);
 
 
             //Part 2
-            OldPart2(input, inputMed);
+            //https://www.reddit.com/r/adventofcode/comments/3xflz8/day_19_solutions/cy4p1td?utm_source=share&utm_medium=web2x
+
+            medicine = medicine.Replace("Rn", "(");
+            medicine = medicine.Replace("Y", ",");
+            medicine = medicine.Replace("Ar", ")");
+
+            List<string> tokens = new List<string>();
+
+            foreach (string row in input)
+                if (!tokens.Contains(row.Split(' ')[0]))
+                    tokens.Add(row.Split(' ')[0]);
+
+            foreach (string t in tokens)
+                medicine = medicine.Replace(t, "T");
+
+            int totalTokens = medicine.Length;
+
+            int brackets = 0, commas = 0;
+            foreach (char c in medicine)
+            {
+                if (c == '(' || c == ')')
+                    brackets++;
+
+                else if (c == ',')
+                    commas++;
+            }
+
+            
+            IO.Output(totalTokens - brackets - (2 * commas)-1);
+
             Console.ReadKey();
         }
 
-        private static void OldPart2(List<string> input, string inputMed)
-        {
-            List<string> medicines = new List<string>();
-            medicines.Add("e");
-
-            List<string> seenMeds = new List<string>();
-
-            int steps = 0;
-            do
-            {
-                seenMeds.AddRange(medicines);
-
-                List<string> newMeds = new List<string>();
-
-                foreach (string med in medicines)
-                {
-                    List<string> extenstions = NewMedicines(input, med);
-
-                    foreach (string ext in extenstions)
-                    {
-                        if (!newMeds.Contains(ext) && !seenMeds.Contains(ext))
-                            newMeds.Add(ext);
-                    }
-                }
-
-                medicines.Clear();
-                medicines.AddRange(newMeds);
-                steps++;
-            } while (!medicines.Contains(inputMed));
-
-
-            IO.Output(steps);
-        }
 
         private static List<string> NewMedicines(List<string> input, string startMed)
         {
@@ -92,6 +88,48 @@ namespace Day_19
             }
 
             return newMedicines;
+        }
+
+        
+
+
+        //This in theory works and does so for both examples. But it scales really bad and is now usable
+#pragma warning disable IDE0051 // Remove unused private members
+        private static void OldPart2(List<string> input, string inputMed)
+#pragma warning restore IDE0051 // Remove unused private members
+        {
+#pragma warning disable IDE0028 // Simplify collection initialization
+            List<string> medicines = new List<string>();
+#pragma warning restore IDE0028 // Simplify collection initialization
+            medicines.Add("e");
+
+            List<string> seenMeds = new List<string>();
+
+            int steps = 0;
+            do
+            {
+                seenMeds.AddRange(medicines);
+
+                List<string> newMeds = new List<string>();
+
+                foreach (string med in medicines)
+                {
+                    List<string> extenstions = NewMedicines(input, med);
+
+                    foreach (string ext in extenstions)
+                    {
+                        if (!newMeds.Contains(ext) && !seenMeds.Contains(ext))
+                            newMeds.Add(ext);
+                    }
+                }
+
+                medicines.Clear();
+                medicines.AddRange(newMeds);
+                steps++;
+            } while (!medicines.Contains(inputMed));
+
+
+            IO.Output(steps);
         }
     }
 

@@ -10,8 +10,6 @@ namespace AoC
     {
         public static int Min(int[] numbers)
         {
-            if (numbers.Length == 0)
-                return int.MinValue;
 
             int min = numbers[0];
 
@@ -26,8 +24,6 @@ namespace AoC
 
         public static int Max(int[] numbers)
         {
-            if (numbers.Length == 0)
-                return int.MaxValue;
 
             int max = numbers[0];
 
@@ -39,5 +35,6 @@ namespace AoC
 
             return max;
         }
+
     }
 }
