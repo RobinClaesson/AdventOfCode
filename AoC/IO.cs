@@ -168,7 +168,7 @@ namespace AoC
 
         public static void WriteLogToFile(bool append, bool openFile)
         {
-            StreamWriter writer = new StreamWriter("Log.txt", false);
+            StreamWriter writer = new StreamWriter("Log.txt", append);
             writer.WriteLine(logBuffer);
             writer.Close();
 

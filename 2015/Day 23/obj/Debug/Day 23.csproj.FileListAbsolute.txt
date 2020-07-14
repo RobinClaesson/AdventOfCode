@@ -1,0 +1,11 @@
+C:\Users\robin\GitHub\AdventOfCode\2015\Day 23\bin\Debug\Day 23.exe.config
+C:\Users\robin\GitHub\AdventOfCode\2015\Day 23\bin\Debug\Day 23.exe
+C:\Users\robin\GitHub\AdventOfCode\2015\Day 23\bin\Debug\Day 23.pdb
+C:\Users\robin\GitHub\AdventOfCode\2015\Day 23\bin\Debug\AoC.dll
+C:\Users\robin\GitHub\AdventOfCode\2015\Day 23\bin\Debug\AoC.pdb
+C:\Users\robin\GitHub\AdventOfCode\2015\Day 23\obj\Debug\Day 23.csprojAssemblyReference.cache
+C:\Users\robin\GitHub\AdventOfCode\2015\Day 23\obj\Debug\Day 23.csproj.CoreCompileInputs.cache
+C:\Users\robin\GitHub\AdventOfCode\2015\Day 23\obj\Debug\Day 23.csproj.CopyComplete
+C:\Users\robin\GitHub\AdventOfCode\2015\Day 23\obj\Debug\Day 23.exe
+C:\Users\robin\GitHub\AdventOfCode\2015\Day 23\obj\Debug\Day 23.pdb
+C:\Users\robin\GitHub\AdventOfCode\2015\Day 23\bin\Debug\Input.txt
