@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1961367F-EE01-40B8-B7A7-7A8379A090B0}</ProjectGuid>
+    <ProjectGuid>{7A018719-07C3-4129-B10D-55D138007A99}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>Day_24</RootNamespace>
     <AssemblyName>Day 24</AssemblyName>
@@ -43,7 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Day 24.cs" />
+    <Compile Include="Day 14.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
