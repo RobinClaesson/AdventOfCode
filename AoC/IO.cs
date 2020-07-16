@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Diagnostics;
 using System.Reflection.Emit;
+using System.IO.Pipes;
 
 namespace AoC
 {
@@ -108,7 +109,27 @@ namespace AoC
             return input;
         }
 
+        public static List<int[]> InputRowsSplitted_Int(char separator)
+        {
+            List<string> rows = InputRows;
 
+            List<int[]> input = new List<int[]>();
+
+            foreach (string row in rows)
+            {
+                string[] splittedRow = row.Split(separator);
+
+                List<int> toAdd = new List<int>();
+
+                foreach (string part in splittedRow)
+                    if(part != "")
+                    toAdd.Add(int.Parse(part));
+
+                input.Add(toAdd.ToArray());
+            }
+
+            return input;
+        }
 
 
         //Answer outputs in console and to file
@@ -151,6 +172,16 @@ namespace AoC
         }
 
         public static void Output(long answer)
+        {
+            Output("" + answer, false);
+        }
+
+        public static void Output(float answer, bool openFile)
+        {
+            Output("" + answer, openFile);
+        }
+
+        public static void Output(float answer)
         {
             Output("" + answer, false);
         }

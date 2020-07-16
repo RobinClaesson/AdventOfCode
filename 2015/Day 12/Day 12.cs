@@ -131,7 +131,7 @@ namespace Day_12
 
         static long GetSum(JProperty prop, string avoid)
         {
-            //Om det är en property som är ett objekt så hamnar den här där vi räknar igenom objektet
+            //Om det är en property som är ett objekt så hamnar den här där vi räknar igenom objektetz
             long sum = 0;
 
             foreach (JToken child in prop)
