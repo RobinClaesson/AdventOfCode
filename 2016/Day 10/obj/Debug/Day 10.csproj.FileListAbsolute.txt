@@ -8,3 +8,4 @@ C:\Users\robin\GitHub\AdventOfCode\2016\Day 10\obj\Debug\Day 10.csproj.CoreCompi
 C:\Users\robin\GitHub\AdventOfCode\2016\Day 10\obj\Debug\Day 10.csproj.CopyComplete
 C:\Users\robin\GitHub\AdventOfCode\2016\Day 10\obj\Debug\Day 10.exe
 C:\Users\robin\GitHub\AdventOfCode\2016\Day 10\obj\Debug\Day 10.pdb
+C:\Users\robin\GitHub\AdventOfCode\2016\Day 10\obj\Debug\Day 10.csprojAssemblyReference.cache

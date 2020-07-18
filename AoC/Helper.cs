@@ -57,5 +57,56 @@ namespace AoC
             return hash.ToString();
         }
 
+
+        public static List<List<T>> EveryCombinationOfItems<T>(List<T> source, int numOfItems, bool considerOrder)
+        {
+            List<List<T>> items = new List<List<T>>();
+
+            if (numOfItems == 0)
+                return items;
+
+            //If there is only one item in source or we want as many as we have and dont care about the oreder
+            if (numOfItems == 1 || (!considerOrder && source.Count <= numOfItems))
+                items.Add(source);
+
+            else foreach (T item in source)
+                {
+                    List<T> witoutCurrent = new List<T>();
+                    witoutCurrent.AddRange(source);
+                    witoutCurrent.Remove(item);
+
+                    List<List<T>> recursions = EveryCombinationOfItems(witoutCurrent, numOfItems - 1, considerOrder);
+
+                    foreach (List<T> recursion in recursions)
+                    {
+
+                        //Adds the current item
+                        recursion.Insert(0, item);
+
+                        if (considerOrder)
+                            items.Add(recursion);
+
+                        else
+                        {
+                            bool hasList = false;
+
+                            foreach (List<T> list in items)
+                            {
+                                if (list.All(recursion.Contains))
+                                    hasList = true;
+                            }
+
+                            if (!hasList)
+                                items.Add(recursion);
+                        }
+                    }
+
+
+                }
+
+
+            return items;
+        }
+
     }
 }

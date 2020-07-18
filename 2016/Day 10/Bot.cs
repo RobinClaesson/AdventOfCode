@@ -3,6 +3,7 @@ using Microsoft.Win32.SafeHandles;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -13,7 +14,7 @@ namespace Day_10
         List<int> chips = new List<int>();
         string lowOutputPlace = "", highOutputPlace = "";
 
-        //bool hasMoved = false;
+        bool hasMoved = false;
 
         public string LowOutputPlace { get { return lowOutputPlace; } set { lowOutputPlace = value; } }
         public string HighOutputPlace { get { return highOutputPlace; } set { highOutputPlace = value; } }
@@ -34,7 +35,7 @@ namespace Day_10
             }
         }
 
-        //public bool HasMoved { get { return hasMoved; } set { hasMoved = true; } }
+        public bool HasMoved { get { return hasMoved; } set { hasMoved = true; } }
 
         public bool CanMove { get { return chips.Count == 2; } }
 
@@ -46,6 +47,16 @@ namespace Day_10
         public void Input(int value)
         {
             chips.Add(value);
+        }
+
+        public bool HasChip(int value)
+        {
+            return chips.Contains(value);
+        }
+
+        public bool HasBothChips(int value1, int value2)
+        {
+            return HasChip(value1) && HasChip(value2);
         }
     }
 }
