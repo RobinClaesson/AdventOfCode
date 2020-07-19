@@ -1,0 +1,10 @@
+C:\Users\robin\GitHub\AdventOfCode\2017\Day 9\bin\Debug\Day 9.exe.config
+C:\Users\robin\GitHub\AdventOfCode\2017\Day 9\bin\Debug\Day 9.exe
+C:\Users\robin\GitHub\AdventOfCode\2017\Day 9\bin\Debug\Day 9.pdb
+C:\Users\robin\GitHub\AdventOfCode\2017\Day 9\bin\Debug\AoC.dll
+C:\Users\robin\GitHub\AdventOfCode\2017\Day 9\bin\Debug\AoC.pdb
+C:\Users\robin\GitHub\AdventOfCode\2017\Day 9\obj\Debug\Day 9.csproj.CoreCompileInputs.cache
+C:\Users\robin\GitHub\AdventOfCode\2017\Day 9\obj\Debug\Day 9.csproj.CopyComplete
+C:\Users\robin\GitHub\AdventOfCode\2017\Day 9\obj\Debug\Day 9.exe
+C:\Users\robin\GitHub\AdventOfCode\2017\Day 9\obj\Debug\Day 9.pdb
+C:\Users\robin\GitHub\AdventOfCode\2017\Day 9\bin\Debug\Input.txt

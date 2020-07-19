@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Numerics;
 
 
 namespace AoC
@@ -65,11 +66,16 @@ namespace AoC
             if (numOfItems == 0)
                 return items;
 
-            //If there is only one item in source or we want as many as we have and dont care about the oreder
-            if (numOfItems == 1 || (!considerOrder && source.Count <= numOfItems))
-                items.Add(source);
 
-            else foreach (T item in source)
+            if (numOfItems == 1)
+            {
+                foreach (T t in source)
+                    items.Add(new List<T>() { t });
+            }
+
+
+            else
+                foreach (T item in source)
                 {
                     List<T> witoutCurrent = new List<T>();
                     witoutCurrent.AddRange(source);
@@ -108,5 +114,8 @@ namespace AoC
             return items;
         }
 
+        
     }
+
 }
+
