@@ -1,7 +1,8 @@
 # AdventOfCode
 My solutions for the puzzles in adventofcode.com
 
-Some, if not most, of the solutions are old and porly optimized. Many are old solutions from early coding days that I had laying around updated just to use my AoC functions.
+Some, if not most, of the solutions are old and porly optimized. 
+Many are old solutions from before KTH that I updated just to use my AoC Library.
 
 
 # AoC Library
