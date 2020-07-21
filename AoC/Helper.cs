@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Numerics;
-
+using System.Drawing;
 
 namespace AoC
 {
@@ -114,7 +114,12 @@ namespace AoC
             return items;
         }
 
-        
+
+        public static Point[] PointNeighbours(Point pos)
+        {
+            return new Point[] {new Point(pos.X+1, pos.Y), new Point(pos.X,pos.Y+1),
+                                new Point(pos.X-1, pos.Y), new Point(pos.X, pos.Y-1)};
+        }
     }
 
 }
