@@ -249,6 +249,10 @@ namespace AoC
             Log("" + log);
         }
 
+        public static void LogDivider()
+        {
+            Log("---------------------------------------------------------");
+        }
 
 
 

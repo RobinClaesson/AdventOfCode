@@ -120,6 +120,29 @@ namespace AoC
             return new Point[] {new Point(pos.X+1, pos.Y), new Point(pos.X,pos.Y+1),
                                 new Point(pos.X-1, pos.Y), new Point(pos.X, pos.Y-1)};
         }
+
+        static DateTime lastProgress = DateTime.Now;
+        public static void PrintProgress(bool clear, int completed, int goal, int precision)
+        {
+            precision *= 100;
+
+            if (goal > precision)
+                if (completed % (goal / precision) == 0)
+                {
+                    if (clear)
+                        Console.Clear();
+
+
+                    TimeSpan sinceLast = DateTime.Now - lastProgress;
+                    double progressDone = (double)completed / (double)(goal / 100);
+                    double progressLeft = 100 - progressDone;
+                    double stepsLeft = progressLeft * precision / 100;
+
+                    Console.WriteLine("Round {1}/{2} = {0}% Done. ", progressDone, completed, goal);
+                    lastProgress = DateTime.Now;
+
+                }
+        }
     }
 
 }

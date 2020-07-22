@@ -9,3 +9,14 @@ C:\Users\robin\GitHub\AdventOfCode\2017\Day 15\obj\Debug\Day 15.csproj.CoreCompi
 C:\Users\robin\GitHub\AdventOfCode\2017\Day 15\obj\Debug\Day 15.csproj.CopyComplete
 C:\Users\robin\GitHub\AdventOfCode\2017\Day 15\obj\Debug\Day 15.exe
 C:\Users\robin\GitHub\AdventOfCode\2017\Day 15\obj\Debug\Day 15.pdb
+D:\Repos\AdventOfCode\2017\Day 15\bin\Debug\Input.txt
+D:\Repos\AdventOfCode\2017\Day 15\bin\Debug\Day 15.exe.config
+D:\Repos\AdventOfCode\2017\Day 15\bin\Debug\Day 15.exe
+D:\Repos\AdventOfCode\2017\Day 15\bin\Debug\Day 15.pdb
+D:\Repos\AdventOfCode\2017\Day 15\bin\Debug\AoC.dll
+D:\Repos\AdventOfCode\2017\Day 15\bin\Debug\AoC.pdb
+D:\Repos\AdventOfCode\2017\Day 15\obj\Debug\Day 15.csprojAssemblyReference.cache
+D:\Repos\AdventOfCode\2017\Day 15\obj\Debug\Day 15.csproj.CoreCompileInputs.cache
+D:\Repos\AdventOfCode\2017\Day 15\obj\Debug\Day 15.csproj.CopyComplete
+D:\Repos\AdventOfCode\2017\Day 15\obj\Debug\Day 15.exe
+D:\Repos\AdventOfCode\2017\Day 15\obj\Debug\Day 15.pdb

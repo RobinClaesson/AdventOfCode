@@ -1,0 +1,11 @@
+D:\Repos\AdventOfCode\2017\Day 16\bin\Debug\Input.txt
+D:\Repos\AdventOfCode\2017\Day 16\bin\Debug\Day 16.exe.config
+D:\Repos\AdventOfCode\2017\Day 16\bin\Debug\Day 16.exe
+D:\Repos\AdventOfCode\2017\Day 16\bin\Debug\Day 16.pdb
+D:\Repos\AdventOfCode\2017\Day 16\bin\Debug\AoC.dll
+D:\Repos\AdventOfCode\2017\Day 16\bin\Debug\AoC.pdb
+D:\Repos\AdventOfCode\2017\Day 16\obj\Debug\Day 16.csprojAssemblyReference.cache
+D:\Repos\AdventOfCode\2017\Day 16\obj\Debug\Day 16.csproj.CoreCompileInputs.cache
+D:\Repos\AdventOfCode\2017\Day 16\obj\Debug\Day 16.csproj.CopyComplete
+D:\Repos\AdventOfCode\2017\Day 16\obj\Debug\Day 16.exe
+D:\Repos\AdventOfCode\2017\Day 16\obj\Debug\Day 16.pdb
