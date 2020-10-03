@@ -2,7 +2,7 @@
 My solutions for the puzzles in adventofcode.com
 
 Some, if not most, of the solutions are old and porly optimized. 
-Many are old solutions from before KTH that I updated just to use my AoC Library.
+Many are old solutions that I updated just to use my AoC Library.
 
 
 # AoC Library
