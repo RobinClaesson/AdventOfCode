@@ -1,0 +1,6 @@
+D:\Dropbox (Fkp Kyl Trp)\Programmering\Advent Of Code\Advent of Code 2019\IntcodeComputer\bin\Debug\IntcodeComputer.dll
+D:\Dropbox (Fkp Kyl Trp)\Programmering\Advent Of Code\Advent of Code 2019\IntcodeComputer\bin\Debug\IntcodeComputer.pdb
+D:\Dropbox (Fkp Kyl Trp)\Programmering\Advent Of Code\Advent of Code 2019\IntcodeComputer\obj\Debug\IntcodeComputer.csprojResolveAssemblyReference.cache
+D:\Dropbox (Fkp Kyl Trp)\Programmering\Advent Of Code\Advent of Code 2019\IntcodeComputer\obj\Debug\IntcodeComputer.csproj.CoreCompileInputs.cache
+D:\Dropbox (Fkp Kyl Trp)\Programmering\Advent Of Code\Advent of Code 2019\IntcodeComputer\obj\Debug\IntcodeComputer.dll
+D:\Dropbox (Fkp Kyl Trp)\Programmering\Advent Of Code\Advent of Code 2019\IntcodeComputer\obj\Debug\IntcodeComputer.pdb

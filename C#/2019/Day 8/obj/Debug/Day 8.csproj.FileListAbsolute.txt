@@ -1,0 +1,13 @@
+D:\Dropbox (Fkp Kyl Trp)\Programmering\Advent Of Code\Advent of Code 2019\Day 8\bin\Debug\Day 8.exe.config
+D:\Dropbox (Fkp Kyl Trp)\Programmering\Advent Of Code\Advent of Code 2019\Day 8\bin\Debug\Day 8.exe
+D:\Dropbox (Fkp Kyl Trp)\Programmering\Advent Of Code\Advent of Code 2019\Day 8\bin\Debug\Day 8.pdb
+D:\Dropbox (Fkp Kyl Trp)\Programmering\Advent Of Code\Advent of Code 2019\Day 8\bin\Debug\AoC_IO.dll
+D:\Dropbox (Fkp Kyl Trp)\Programmering\Advent Of Code\Advent of Code 2019\Day 8\bin\Debug\Microsoft.Xna.Framework.dll
+D:\Dropbox (Fkp Kyl Trp)\Programmering\Advent Of Code\Advent of Code 2019\Day 8\bin\Debug\AoC_IO.pdb
+D:\Dropbox (Fkp Kyl Trp)\Programmering\Advent Of Code\Advent of Code 2019\Day 8\bin\Debug\Microsoft.Xna.Framework.xml
+D:\Dropbox (Fkp Kyl Trp)\Programmering\Advent Of Code\Advent of Code 2019\Day 8\obj\Debug\Day 8.csprojResolveAssemblyReference.cache
+D:\Dropbox (Fkp Kyl Trp)\Programmering\Advent Of Code\Advent of Code 2019\Day 8\obj\Debug\Day 8.csproj.CoreCompileInputs.cache
+D:\Dropbox (Fkp Kyl Trp)\Programmering\Advent Of Code\Advent of Code 2019\Day 8\obj\Debug\Day 8.csproj.CopyComplete
+D:\Dropbox (Fkp Kyl Trp)\Programmering\Advent Of Code\Advent of Code 2019\Day 8\obj\Debug\Day 8.exe
+D:\Dropbox (Fkp Kyl Trp)\Programmering\Advent Of Code\Advent of Code 2019\Day 8\obj\Debug\Day 8.pdb
+D:\Dropbox (Fkp Kyl Trp)\Programmering\Advent Of Code\Advent of Code 2019\Day 8\bin\Debug\Input.txt
