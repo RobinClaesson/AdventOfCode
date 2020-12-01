@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using AoC_IO;
+using AoC;
 
 namespace Day_7
 {
     class Amplifier
     {
-        List<int> program = Input.GetSeparatedInputList_Int(',');
+        List<int> program = IO.InputSplitted_Int(',');
+        //List<int> program = Input.GetSeparatedInputList_Int(',');
         int programPosition = 0;
         public int output = 0, lastOpcode = -1;
 

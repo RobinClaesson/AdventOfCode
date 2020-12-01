@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using AoC_IO;
+using AoC;
 using System.Drawing;
 using System.Diagnostics;
 
@@ -13,9 +13,11 @@ namespace Day_8
     {
         static void Main(string[] args)
         {
-            string input = Input.GetInput_String;
+            //string input = Input.GetInput_String;
+            string input = IO.Input;
+
             Point imageSize = new Point(25, 6);
-            
+
             Part1(input, imageSize);
 
             //Part 2
@@ -90,8 +92,7 @@ namespace Day_8
                 }
             }
 
-
-            Output.PresentAnswer(ones * twos);
+            IO.Output(ones * twos);
         }
     }
 }

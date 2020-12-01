@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using AoC_IO;
+using AoC;
 using Microsoft.Xna.Framework;
 
 namespace Day_10
@@ -12,7 +12,8 @@ namespace Day_10
     {
         static void Main(string[] args)
         {
-            List<string> input = Input.GetInputList_String;
+            //List<string> input = Input.GetInputList_String;
+            List<string> input = IO.InputRows;
             Point mapSize = new Point(input[0].Length, input.Count);
 
             //Finetuned with examples
@@ -68,7 +69,7 @@ namespace Day_10
 
             }
 
-            Output.PresentAnswer(maxViews + " at " + basePos);
+            IO.Output(maxViews + " at " + basePos);
 
 
             //Part 2

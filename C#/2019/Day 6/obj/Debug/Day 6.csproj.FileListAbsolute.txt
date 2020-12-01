@@ -9,3 +9,13 @@ D:\Dropbox (Fkp Kyl Trp)\Programmering\Advent Of Code\Advent of Code 2019\Day 6\
 D:\Dropbox (Fkp Kyl Trp)\Programmering\Advent Of Code\Advent of Code 2019\Day 6\obj\Debug\Day 6.csproj.CopyComplete
 D:\Dropbox (Fkp Kyl Trp)\Programmering\Advent Of Code\Advent of Code 2019\Day 6\obj\Debug\Day 6.exe
 D:\Dropbox (Fkp Kyl Trp)\Programmering\Advent Of Code\Advent of Code 2019\Day 6\obj\Debug\Day 6.pdb
+C:\Users\robin\GitHub\AdventOfCode\C#\2019\Day 6\bin\Debug\Input.txt
+C:\Users\robin\GitHub\AdventOfCode\C#\2019\Day 6\bin\Debug\Day 6.exe.config
+C:\Users\robin\GitHub\AdventOfCode\C#\2019\Day 6\bin\Debug\Day 6.exe
+C:\Users\robin\GitHub\AdventOfCode\C#\2019\Day 6\bin\Debug\Day 6.pdb
+C:\Users\robin\GitHub\AdventOfCode\C#\2019\Day 6\bin\Debug\AoC.dll
+C:\Users\robin\GitHub\AdventOfCode\C#\2019\Day 6\bin\Debug\AoC.pdb
+C:\Users\robin\GitHub\AdventOfCode\C#\2019\Day 6\obj\Debug\Day 6.csproj.CoreCompileInputs.cache
+C:\Users\robin\GitHub\AdventOfCode\C#\2019\Day 6\obj\Debug\Day 6.csproj.CopyComplete
+C:\Users\robin\GitHub\AdventOfCode\C#\2019\Day 6\obj\Debug\Day 6.exe
+C:\Users\robin\GitHub\AdventOfCode\C#\2019\Day 6\obj\Debug\Day 6.pdb

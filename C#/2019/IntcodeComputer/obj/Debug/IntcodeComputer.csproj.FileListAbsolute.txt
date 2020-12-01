@@ -4,3 +4,9 @@ D:\Dropbox (Fkp Kyl Trp)\Programmering\Advent Of Code\Advent of Code 2019\Intcod
 D:\Dropbox (Fkp Kyl Trp)\Programmering\Advent Of Code\Advent of Code 2019\IntcodeComputer\obj\Debug\IntcodeComputer.csproj.CoreCompileInputs.cache
 D:\Dropbox (Fkp Kyl Trp)\Programmering\Advent Of Code\Advent of Code 2019\IntcodeComputer\obj\Debug\IntcodeComputer.dll
 D:\Dropbox (Fkp Kyl Trp)\Programmering\Advent Of Code\Advent of Code 2019\IntcodeComputer\obj\Debug\IntcodeComputer.pdb
+C:\Users\robin\GitHub\AdventOfCode\C#\2019\IntcodeComputer\bin\Debug\IntcodeComputer.dll
+C:\Users\robin\GitHub\AdventOfCode\C#\2019\IntcodeComputer\bin\Debug\IntcodeComputer.pdb
+C:\Users\robin\GitHub\AdventOfCode\C#\2019\IntcodeComputer\obj\Debug\IntcodeComputer.csprojAssemblyReference.cache
+C:\Users\robin\GitHub\AdventOfCode\C#\2019\IntcodeComputer\obj\Debug\IntcodeComputer.csproj.CoreCompileInputs.cache
+C:\Users\robin\GitHub\AdventOfCode\C#\2019\IntcodeComputer\obj\Debug\IntcodeComputer.dll
+C:\Users\robin\GitHub\AdventOfCode\C#\2019\IntcodeComputer\obj\Debug\IntcodeComputer.pdb

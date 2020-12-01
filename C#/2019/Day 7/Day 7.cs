@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using AoC_IO;
+using AoC;
 
 namespace Day_7
 {
@@ -11,7 +11,7 @@ namespace Day_7
     {
         static void Main(string[] args)
         {
-         
+
             Part1();
 
             //Part 2
@@ -24,13 +24,13 @@ namespace Day_7
                         for (int d = 0; d < 5; d++)
                             for (int e = 0; e < 5; e++)
                             {
-                                int[] setting = new int[] { a+5, b+5, c+5, d+5, e+5 };
+                                int[] setting = new int[] { a + 5, b + 5, c + 5, d + 5, e + 5 };
                                 if (setting.Distinct().Count() == setting.Length)
                                     phaseSettings.Add(setting);
                             }
 
 
-            foreach(int[] setting in phaseSettings)
+            foreach (int[] setting in phaseSettings)
             {
                 Amplifier[] amplifiers = new Amplifier[] {  new Amplifier(setting[0]),
                                                             new Amplifier(setting[1]),
@@ -50,7 +50,7 @@ namespace Day_7
                     amplifiers[3].Compute(amplifiers[2].output);
                     amplifiers[4].Compute(amplifiers[3].output);
 
-                    
+
 
                     output = amplifiers[4].output;
                 } while (amplifiers[4].lastOpcode != 99);
@@ -59,8 +59,8 @@ namespace Day_7
                     maxOutput = output;
             }
 
-            Output.PresentAnswer(maxOutput);
-            Console.ReadKey();
+            IO.Output(maxOutput, true);
+            
         }
 
         private static void Part1()
@@ -89,15 +89,15 @@ namespace Day_7
                     maxOutput = output;
             }
 
-            
-            Output.PresentAnswer(maxOutput);
+            IO.Output(maxOutput);
         }
 
         static string Compute(int[] input)
         {
             int inputUsed = 0;
             string output = "";
-            List<int> program = Input.GetSeparatedInputList_Int(',');
+            //List<int> program = Input.GetSeparatedInputList_Int(',');
+            List<int> program = IO.InputSplitted_Int(',');
             int programPosition = 0;
 
             while (program[programPosition] != 99)

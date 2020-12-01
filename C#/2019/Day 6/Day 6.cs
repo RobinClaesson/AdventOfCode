@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using AoC_IO;
+using AoC;
 
 namespace Day_6
 {
@@ -11,7 +11,8 @@ namespace Day_6
     {
         static void Main(string[] args)
         {
-            List<string> input = Input.GetInputList_String;
+            List<string> input = IO.InputRows;
+            //List<string> input = Input.GetInputList_String;
 
             List<Node> nodes = new List<Node>();
 
@@ -58,19 +59,9 @@ namespace Day_6
             }
 
 
-            Console.WriteLine("Part 1:");
-            int part1 = nodes[0].Weight();
-            Console.WriteLine(part1);
+            IO.Output(nodes[0].Weight());
+            IO.Output(nodes[0].StepsBetween("YOU", "SAN"));
 
-            Console.WriteLine("----------------");
-
-
-            Console.WriteLine("Part 2:");
-            int part2 = nodes[0].StepsBetween("YOU", "SAN");
-            Console.WriteLine(part2);
-            Output.SaveToClipboard(part2);
-
-            Console.ReadKey();
 
         }
     }

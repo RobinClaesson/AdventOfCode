@@ -11,3 +11,15 @@ D:\Dropbox (Fkp Kyl Trp)\Programmering\Advent Of Code\Advent of Code 2019\Day 8\
 D:\Dropbox (Fkp Kyl Trp)\Programmering\Advent Of Code\Advent of Code 2019\Day 8\obj\Debug\Day 8.exe
 D:\Dropbox (Fkp Kyl Trp)\Programmering\Advent Of Code\Advent of Code 2019\Day 8\obj\Debug\Day 8.pdb
 D:\Dropbox (Fkp Kyl Trp)\Programmering\Advent Of Code\Advent of Code 2019\Day 8\bin\Debug\Input.txt
+C:\Users\robin\GitHub\AdventOfCode\C#\2019\Day 8\bin\Debug\Input.txt
+C:\Users\robin\GitHub\AdventOfCode\C#\2019\Day 8\bin\Debug\Day 8.exe.config
+C:\Users\robin\GitHub\AdventOfCode\C#\2019\Day 8\bin\Debug\Day 8.exe
+C:\Users\robin\GitHub\AdventOfCode\C#\2019\Day 8\bin\Debug\Day 8.pdb
+C:\Users\robin\GitHub\AdventOfCode\C#\2019\Day 8\bin\Debug\AoC.dll
+C:\Users\robin\GitHub\AdventOfCode\C#\2019\Day 8\bin\Debug\AoC.pdb
+C:\Users\robin\GitHub\AdventOfCode\C#\2019\Day 8\bin\Debug\Microsoft.Xna.Framework.xml
+C:\Users\robin\GitHub\AdventOfCode\C#\2019\Day 8\obj\Debug\Day 8.csprojAssemblyReference.cache
+C:\Users\robin\GitHub\AdventOfCode\C#\2019\Day 8\obj\Debug\Day 8.csproj.CoreCompileInputs.cache
+C:\Users\robin\GitHub\AdventOfCode\C#\2019\Day 8\obj\Debug\Day 8.csproj.CopyComplete
+C:\Users\robin\GitHub\AdventOfCode\C#\2019\Day 8\obj\Debug\Day 8.exe
+C:\Users\robin\GitHub\AdventOfCode\C#\2019\Day 8\obj\Debug\Day 8.pdb

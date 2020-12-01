@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using AoC;
 namespace Day_4
 {
     class Program
     {
         static void Main(string[] args)
         {
-            int start = 137683, end = 596253;
+            int start = 265275, end = 781584;
             int counter = 0;
 
             for (int i = start; i <= end; i++)
@@ -31,7 +31,7 @@ namespace Day_4
                     counter++;
             }
 
-            Console.WriteLine("Part 1: " + counter);
+            IO.Output(counter);
 
             counter = 0;
             for (int i = start; i <= end; i++)
@@ -67,8 +67,7 @@ namespace Day_4
                     counter++;
             }
 
-            Console.WriteLine("Part 2: " + counter);
-            Console.ReadKey();
+            IO.Output(counter);
         }
     }
 }

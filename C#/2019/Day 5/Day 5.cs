@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using AoC_IO;
+using AoC;
 
 namespace Day_5
 {
@@ -11,23 +11,16 @@ namespace Day_5
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Part 1:");
-            Console.WriteLine(Compute(1));
+            IO.Output(Compute(1));
+            IO.Output(Compute(5), true);
 
-            Console.WriteLine("------------------------");
-
-            Console.WriteLine("Part 2:");
-            string answer = Compute(5);
-            Console.WriteLine(answer);
-            Output.SaveToClipboard(answer);
-
-            Console.ReadKey();
         }
 
         public static string Compute(int input)
         {
             string output = "";
-            List<int> program = Input.GetSeparatedInputList_Int(',');
+            //List<int> program = Input.GetSeparatedInputList_Int(',');
+            List<int> program = IO.InputSplitted_Int(',');
             int programPosition = 0;
 
             while (program[programPosition] != 99)

@@ -7,7 +7,7 @@ using System.Reflection;
 
 namespace IntcodeComputer
 {
-    public class Computer
+    public class IntecodeComputer
     {
         protected List<long> _program = new List<long>(), _baseProgram;
         protected int _programPosition, _input, _lastOpcode, _relativeBase;
@@ -30,14 +30,14 @@ namespace IntcodeComputer
 
         public int Input { set { _input = value; } }
 
-        public Computer(List<long> program, int input)
+        public IntecodeComputer(List<long> program, int input)
         {
             _baseProgram = program;
             Reset();
 
             _input = input;
         }
-        public Computer(List<long> program)
+        public IntecodeComputer(List<long> program)
         {
             _baseProgram = program;
             Reset();

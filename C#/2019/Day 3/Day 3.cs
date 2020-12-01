@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Threading;
 using AoC;
 using System.Drawing;
 
@@ -13,81 +12,106 @@ namespace Day_3
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Reading Input");
             List<string> input = IO.InputRows;
-            //List<string> input = Input.GetSeparatedInputList_String('\r');
 
-            //Removes the '\n' from every linebreak
-            for (int i = 1; i < input.Count; i++)
-                input[i] = input[i].Substring(1);
+            List<Point>[] wires = new List<Point>[] { new List<Point>(), new List<Point>() };
 
-            Console.WriteLine("Creating Wires");
-            List<Wire> wires = new List<Wire>();
+            wires[0].Add(Point.Empty);
+            wires[1].Add(Point.Empty);
 
-            foreach (string path in input)
+            //Creates wires
+            for (int i = 0; i < wires.Length; i++)
             {
-                string[] steps = path.Split(',');
-                Wire wire = new Wire();
+                string[] moves = input[i].Split(',');
 
-                foreach (string step in steps)
+                foreach (string move in moves)
                 {
-                    char direction = step[0];
-                    int distance = int.Parse(step.Remove(0, 1));
+                    char dir = move.First();
+                    int dist = int.Parse(move.Substring(1));
 
-                    wire.AddPoints(direction, distance);
+                    for (int j = 0; j < dist; j++)
+                    {
+                        Point last = wires[i].Last();
+                        switch (dir)
+                        {
+                            default:
+                            case 'U':
+                                wires[i].Add(new Point(last.X, last.Y + 1));
+                                break;
+
+                            case 'D':
+                                wires[i].Add(new Point(last.X, last.Y - 1));
+                                break;
+
+                            case 'R':
+                                wires[i].Add(new Point(last.X + 1, last.Y));
+                                break;
+
+                            case 'L':
+                                wires[i].Add(new Point(last.X - 1, last.Y));
+                                break;
+                        }
+                    }
+                }
+            }
+
+            //Finding intersections between wires
+            List<Point> intersections = new List<Point>();
+            double counter = 1, lastDone = 0;
+            foreach (Point w1 in wires[0])
+            {
+
+                foreach (Point w2 in wires[1])
+                {
+                    if (w1.Equals(w2) && !w1.Equals(Point.Empty))
+                        intersections.Add(w1);
                 }
 
-                wires.Add(wire);
+                double done = Math.Round((counter / wires[0].Count) * 100, 0);
+                if (done != lastDone)
+                {
+                    Console.Clear();
+                    Console.WriteLine("Finding intersections {0}%", done);
+                    lastDone = done;
+                }
+                counter++;
             }
 
-            Console.WriteLine("Finding Intersections");
 
-
-            Part1(wires);
-
-            IO.Output(wires[0].StepsToIntersection(wires[1]));
-            Console.ReadKey();
-        }
-
-        private static void Part1(List<Wire> wires)
-        {
-            List<Point> intersections = new List<Point>();
-
-            intersections.AddRange(FindIntersections(0, wires.Count, wires));
-
-            Console.WriteLine("Finding closest intersection");
-            int closest = ManhattanDistance(Point.Empty, intersections[0]);
-
+            //Finding answers
+            int closestDist = ManhattanDistToStart(intersections[0]);
+            int fewestSteps = StepsToIntersection(wires, intersections[0]);
             for (int i = 1; i < intersections.Count; i++)
             {
-                int md = ManhattanDistance(Point.Empty, intersections[i]);
+                int dist = ManhattanDistToStart(intersections[i]);
 
-                if (md < closest)
-                    closest = md;
+                if (dist < closestDist)
+                    closestDist = dist;
+
+                int steps = StepsToIntersection(wires, intersections[i]);
+
+                if (steps < fewestSteps)
+                    fewestSteps = steps;
             }
 
-            IO.Output(closest);
-          
+
+            IO.Output(closestDist);
+            IO.Output(fewestSteps);
         }
 
-        private static int ManhattanDistance(Point p1, Point p2)
+        private static int ManhattanDist(Point p1, Point p2)
         {
             return Math.Abs(p1.X - p2.X) + Math.Abs(p1.Y - p2.Y);
         }
 
-        private static List<Point> FindIntersections(int startIndex, int endIndex, List<Wire> wires)
+        private static int ManhattanDistToStart(Point p)
         {
-            List<Point> intersections = new List<Point>();
-
-            for (int i = startIndex; i < endIndex; i++)
-                for (int j = i + 1; j < endIndex; j++)
-                {
-                    intersections.AddRange(wires[i].FindIntersections(wires[j]));
-                }
-
-
-            return intersections;
+            return ManhattanDist(p, Point.Empty);
         }
 
+        private static int StepsToIntersection(List<Point>[] wires, Point intersection)
+        {
+            return wires[0].IndexOf(intersection) + wires[1].IndexOf(intersection);
+        }
     }
 }

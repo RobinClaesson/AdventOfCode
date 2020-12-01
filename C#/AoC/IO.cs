@@ -93,6 +93,17 @@ namespace AoC
             return inputInt;
         }
 
+        public static List<long> InputSplitted_Long(char separator)
+        {
+            List<string> input = InputSplitted(separator);
+            List<long> inputlong = new List<long>();
+
+            for (int i = 0; i < input.Count; i++)
+                inputlong.Add(long.Parse(input[i]));
+
+            return inputlong;
+        }
+
 
         //Input by row and separation at row
         public static List<string[]> InputRowsSplitted(char separator)
@@ -152,6 +163,7 @@ namespace AoC
                 ClearOutput();
             outputs++;
 
+            
             string path = "Output.txt";
             StreamWriter writer = new StreamWriter(path, true);
             writer.WriteLine("Part " + outputs + ": " + answer);
@@ -160,6 +172,9 @@ namespace AoC
 
             if (openFile)
                 Process.Start("notepad.exe", path);
+
+            if (outputs == 2)
+                Console.ReadKey();
         }
         public static void Output(string answer)
         {

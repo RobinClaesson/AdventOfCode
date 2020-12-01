@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using AoC_IO;
+using AoC;
 using IntcodeComputer;
 
 namespace Day_9
@@ -12,20 +12,21 @@ namespace Day_9
     {
         static void Main(string[] args)
         {
-            Computer intComp = new Computer(Input.GetSeparatedInputList_Long(','));
+            //Computer intComp = new Computer(Input.GetSeparatedInputList_Long(','));
+            IntecodeComputer intComp = new IntecodeComputer(IO.InputSplitted_Long(','));
 
             Console.WriteLine("Part 1");
             intComp.Input = 1;
             intComp.ComputeToEnd(true, false);
-            Output.PresentAnswer(intComp.Output);
+            IO.Output(intComp.Output);
 
             intComp.Reset();
             Console.WriteLine("Part 1");
             intComp.Input = 2;
             intComp.ComputeToEnd();
-            Output.PresentAnswer(intComp.Output);
+            IO.Output(intComp.Output, true);
 
-            Console.ReadKey();
+            
         }
 
 
