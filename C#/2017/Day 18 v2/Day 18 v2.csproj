@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8C88B528-49B0-40B0-8C54-87092618D256}</ProjectGuid>
+    <ProjectGuid>{3B24E3DB-34CE-49C3-9D55-717D84EDDA2A}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Day_18</RootNamespace>
-    <AssemblyName>Day 18</AssemblyName>
+    <RootNamespace>Day_18_v2</RootNamespace>
+    <AssemblyName>Day 18 v2</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,8 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Day 18.cs" />
+    <Compile Include="Day18v2.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Register.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

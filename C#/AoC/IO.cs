@@ -173,8 +173,8 @@ namespace AoC
             if (openFile)
                 Process.Start("notepad.exe", path);
 
-            if (outputs == 2)
-                Console.ReadKey();
+            //if (outputs == 2)
+            //    Console.ReadKey();
         }
         public static void Output(string answer)
         {
