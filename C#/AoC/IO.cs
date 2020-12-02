@@ -143,6 +143,22 @@ namespace AoC
         }
 
 
+        //Gets an list of every row as char[]
+        public static List<char[]> InputRowsArray
+        {
+            get
+            {
+                List<char[]> input = new List<char[]>();
+                List<string> rows = InputRows;
+
+                foreach (string row in rows)
+                    input.Add(row.ToCharArray());
+
+                return input;
+            }
+        }
+
+
         //Answer outputs in console and to file
         private static int outputs = 0;
         private static void ClearOutput()
