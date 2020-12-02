@@ -44,7 +44,6 @@ public class AoC {
     }
 
     public static ArrayList<Integer> inputRows_Int(int day){
-        File file = new File("Input" + day + ".txt");
         Scanner reader = getReader(day);
 
         ArrayList<Integer> input = new ArrayList<>();
@@ -58,12 +57,29 @@ public class AoC {
 
     }
 
-    private static int part = 1;
+    public  static ArrayList<String[]> inputRowsSplit(int day, String splitAt)
+    {
+        Scanner reader = getReader(day);
+
+        ArrayList<String[]> input = new ArrayList<>();
+
+        while (reader.hasNextLine())
+            input.add(reader.nextLine().split(splitAt));
+
+        return input;
+    }
+
+
+
+
+
+
+    private static int outputs = 1;
 
     public static void Output(String result) {
-        System.out.println("Answer part " + part + ": " + result);
+        System.out.println("Answer part " + outputs + ": " + result);
 
-        part++;
+        outputs++;
     }
 
     public static void Output(int result) {
