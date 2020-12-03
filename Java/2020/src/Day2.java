@@ -37,8 +37,8 @@ public class Day2 {
         }
 
 
-        AoC.Output(valid1);
-        AoC.Output(valid2);
+        AoC.output(valid1);
+        AoC.output(valid2);
 
     }
 

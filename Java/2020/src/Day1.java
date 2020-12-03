@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.List;
 
 public class Day1 {
@@ -18,7 +17,7 @@ public class Day1 {
                 int sum = input.get(i) + input.get(j);
 
                 if (sum == 2020) {
-                    AoC.Output(input.get(i) * input.get(j));
+                    AoC.output(input.get(i) * input.get(j));
                     return;
                 }
             }
@@ -32,7 +31,7 @@ public class Day1 {
                     int sum = input.get(i) + input.get(j) + input.get(k);
 
                     if (sum == 2020) {
-                        AoC.Output(input.get(i) * input.get(j) * input.get(k));
+                        AoC.output(input.get(i) * input.get(j) * input.get(k));
                         return;
                     }
                 }

@@ -43,7 +43,7 @@ public class AoC {
 
     }
 
-    public static ArrayList<Integer> inputRows_Int(int day){
+    public static ArrayList<Integer> inputRows_Int(int day) {
         Scanner reader = getReader(day);
 
         ArrayList<Integer> input = new ArrayList<>();
@@ -57,8 +57,7 @@ public class AoC {
 
     }
 
-    public  static ArrayList<String[]> inputRowsSplit(int day, String splitAt)
-    {
+    public static ArrayList<String[]> inputRowsSplit(int day, String splitAt) {
         Scanner reader = getReader(day);
 
         ArrayList<String[]> input = new ArrayList<>();
@@ -70,19 +69,19 @@ public class AoC {
     }
 
 
-
-
-
-
     private static int outputs = 1;
 
-    public static void Output(String result) {
+    public static void output(String result) {
         System.out.println("Answer part " + outputs + ": " + result);
 
         outputs++;
     }
 
-    public static void Output(int result) {
-        Output("" + result);
+    public static void output(int result) {
+        output("" + result);
+    }
+
+    public static void output(long result) {
+        output(result + "");
     }
 }
