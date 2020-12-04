@@ -84,4 +84,14 @@ public class AoC {
     public static void output(long result) {
         output(result + "");
     }
+
+
+    public  static boolean tryParseInt(String value) {
+        try {
+            Integer.parseInt(value);
+            return true;
+        } catch (NumberFormatException e) {
+            return false;
+        }
+    }
 }

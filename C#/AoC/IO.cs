@@ -133,8 +133,8 @@ namespace AoC
                 List<int> toAdd = new List<int>();
 
                 foreach (string part in splittedRow)
-                    if(part != "")
-                    toAdd.Add(int.Parse(part));
+                    if (part != "")
+                        toAdd.Add(int.Parse(part));
 
                 input.Add(toAdd.ToArray());
             }
@@ -143,16 +143,16 @@ namespace AoC
         }
 
 
-        //Gets an list of every row as char[]
-        public static List<char[]> InputRowsArray
+        //Gets an list of every row as 
+        public static List<List<char>> InputChars
         {
             get
             {
-                List<char[]> input = new List<char[]>();
+                List<List<char>> input = new List<List<char>>();
                 List<string> rows = InputRows;
 
                 foreach (string row in rows)
-                    input.Add(row.ToCharArray());
+                    input.Add(row.ToList<char>());
 
                 return input;
             }
@@ -179,7 +179,7 @@ namespace AoC
                 ClearOutput();
             outputs++;
 
-            
+
             string path = "Output.txt";
             StreamWriter writer = new StreamWriter(path, true);
             writer.WriteLine("Part " + outputs + ": " + answer);
@@ -226,7 +226,7 @@ namespace AoC
             Output("" + answer, false);
         }
 
-        
+
 
 
 
@@ -272,7 +272,7 @@ namespace AoC
             }
 
             logBuffer += log + "\r\n";
-            
+
         }
 
         public static void Log(int log)
