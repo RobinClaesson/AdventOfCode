@@ -38,7 +38,6 @@ public class Day5 {
                 break;
             }
         }
-
     }
 
     private static int BinaryValueFromString(String s, char one) {
