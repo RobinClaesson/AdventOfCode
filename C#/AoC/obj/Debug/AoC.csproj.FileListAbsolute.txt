@@ -10,3 +10,9 @@ D:\Repos\AdventOfCode\AoC\obj\Debug\AoC.csprojAssemblyReference.cache
 D:\Repos\AdventOfCode\AoC\obj\Debug\AoC.csproj.CoreCompileInputs.cache
 D:\Repos\AdventOfCode\AoC\obj\Debug\AoC.dll
 D:\Repos\AdventOfCode\AoC\obj\Debug\AoC.pdb
+C:\Users\robin\GitHub\AdventOfCode\C#\AoC\bin\Debug\AoC.dll
+C:\Users\robin\GitHub\AdventOfCode\C#\AoC\bin\Debug\AoC.pdb
+C:\Users\robin\GitHub\AdventOfCode\C#\AoC\obj\Debug\AoC.csproj.AssemblyReference.cache
+C:\Users\robin\GitHub\AdventOfCode\C#\AoC\obj\Debug\AoC.csproj.CoreCompileInputs.cache
+C:\Users\robin\GitHub\AdventOfCode\C#\AoC\obj\Debug\AoC.dll
+C:\Users\robin\GitHub\AdventOfCode\C#\AoC\obj\Debug\AoC.pdb
