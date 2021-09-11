@@ -12,6 +12,7 @@ namespace Day_4
         {
             List<string> input = IO.InputRows;
 
+            //Create events
             List<Event> events = new List<Event>();
             foreach (string row in input)
             {
@@ -29,10 +30,11 @@ namespace Day_4
                 events.Add(new Event(new DateTime(2000, month, day, hour, minute, 0), row.Substring(19)));
             }
 
+            //Sort events by date
             events = events.OrderBy(e => e.dt).ToList(); //Learning to love Linq <3 
 
+            //Create guards from events
             List<Guard> guards = new List<Guard>();
-
             int i = 0;
             while (i < events.Count)
             {
@@ -61,14 +63,15 @@ namespace Day_4
                 }
             }
 
-            guards = guards.OrderBy(g => g.MinutesAsleep).ToList();
+            //Part 1
+            guards = guards.OrderBy(g => g.TotalMinutesAsleep).ToList(); 
 
             int guardId = guards.Last().id;
             int min = guards.Last().MinuteMostAsleep;
             IO.Output(guardId * min);
 
             //Part 2
-            guards = guards.OrderBy(g => g.MinuteMostAsleepTimes).ToList();
+            guards = guards.OrderBy(g => g.MinuteMostAsleepTimes).ToList(); 
 
             guardId = guards.Last().id;
             min = guards.Last().MinuteMostAsleep;
