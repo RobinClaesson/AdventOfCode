@@ -100,7 +100,7 @@ namespace Day_6
 
             //Part 2
             //Found out by testing values on x that theese limits, even though they seem small are way enough to cover. 
-            //Its not optimized, but it runs fast so its ok i guess
+            //Its not optimized, but it runs fast so its ok i guess.
             int size = 0;
             for (int y = 0; y <= yMax; y++)
             {
