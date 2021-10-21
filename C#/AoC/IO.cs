@@ -10,7 +10,7 @@ using System.IO.Pipes;
 
 namespace AoC
 {
-    public class IO
+    public static class IO
     {
         //Straight input
         public static string Input
@@ -225,7 +225,6 @@ namespace AoC
         {
             Output("" + answer, false);
         }
-
 
 
 
