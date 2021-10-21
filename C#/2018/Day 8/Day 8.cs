@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AoC;
 
 namespace Day_8
 {
@@ -10,6 +11,14 @@ namespace Day_8
     {
         static void Main(string[] args)
         {
+            string[] input = IO.Input.Split(' ');
+
+            Node root = new Node(input);
+
+            IO.Output(root.Sum);
+            IO.Output(root.Sum2);
+
+            Console.ReadKey();
         }
     }
 }

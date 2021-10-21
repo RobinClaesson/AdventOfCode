@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E7E8E2A5-9B59-403F-97D4-7B9DEC58030A}</ProjectGuid>
+    <ProjectGuid>{851530D2-FD03-4208-94B1-4F75BFDD49E3}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Day_8</RootNamespace>
-    <AssemblyName>Day 8</AssemblyName>
+    <RootNamespace>Day_9</RootNamespace>
+    <AssemblyName>Day 9</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,8 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Day 8.cs" />
-    <Compile Include="Node.cs" />
+    <Compile Include="Day 9.cs" />
+    <Compile Include="Marbles.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -55,11 +55,6 @@
       <Project>{f12ede65-84cd-4b4c-8429-29e5a61c93bb}</Project>
       <Name>AoC</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Input.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
