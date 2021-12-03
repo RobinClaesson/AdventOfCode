@@ -72,6 +72,28 @@ namespace AoC
             }
         }
 
+        public static List<char[]> InputRowsArray
+        {
+            get
+            {
+                List<char[]> input = new List<char[]>();
+
+                if (File.Exists("Input.txt"))
+                {
+                    StreamReader reader = new StreamReader("Input.txt");
+
+                    string read;
+
+                    while ((read = reader.ReadLine()) != null)
+                        input.Add(read.ToCharArray());
+
+                    reader.Close();
+                }
+
+                return input;
+            }
+        }
+
 
         //Input by separation at separator
         public static List<string> InputSplitted(char separator)
