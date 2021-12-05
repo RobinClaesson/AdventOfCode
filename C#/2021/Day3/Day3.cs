@@ -12,37 +12,9 @@ namespace Day3
         static void Main(string[] args)
         {
             List<char[]> input = IO.InputRowsArray;
-
-            //Part 1
-            string least = "", most = "";
-            for (int x = 0; x < input[0].Length; x++)
-            {
-                int ones = 0, zeroes = 0;
-                for (int y = 0; y < input.Count; y++)
-                {
-                    if (input[y][x] == '0')
-                        zeroes++;
-                    else
-                        ones++;
-                }
-
-                if (zeroes < ones)
-                {
-                    least += "0";
-                    most += "1";
-                }
-                else
-                {
-                    least += "1";
-                    most += "0";
-                }
-            }
-
-            int gamma = Convert.ToInt32(most, 2);
-            int epsilon = Convert.ToInt32(least, 2);
-            IO.Output(gamma * epsilon);
-
-
+            List<string> input2 = IO.InputRows;
+            Part1(input2);
+            Part2(input2);
 
             //Part 2
             List<char[]> oxygen = new List<char[]>();
@@ -110,5 +82,55 @@ namespace Day3
             IO.Output(Convert.ToInt32(new string(oxygen[0]), 2) * Convert.ToInt32(new string(co2[0]), 2));
             Console.ReadKey();
         }
+
+        static void Part1(List<string> input)
+        {
+
+            string least = "", most = "";
+
+            for (int i = 0; i < input[0].Length; i++)
+            {
+                int ones = (from x in input where x[i] == '1' select x).Count();
+
+                if (ones > input.Count / 2)
+                {
+                    most += '1';
+                    least += '0';
+                }
+
+                else
+                {
+                    most += '0';
+                    least += '1';
+                }
+            }
+
+            IO.Output(Convert.ToInt32(most, 2) * Convert.ToInt32(least, 2));
+        }
+
+        static void Part2(List<string> input)
+        {
+            List<string> oxygen = new List<string>();
+            oxygen.AddRange(input);
+            List<string> co2 = new List<string>();
+            co2.AddRange(input);
+
+            int i = 0;
+            while (oxygen.Count() > 1 || co2.Count() > 1)
+            {
+                if (oxygen.Count() > 1)
+                {
+                    var temp = oxygen.GroupBy(x => x[i]).OrderByDescending(g => g.Count());
+                    oxygen = oxygen.GroupBy(x => x[i]).OrderByDescending(g => g.Count()).ThenByDescending(g => g.Key).Select(g => g.ToList()).First();
+                }
+                    
+                if (co2.Count() > 1)
+                    co2 = co2.GroupBy(x => x[i]).OrderBy(g => g.Count()).Select(g => g.ToList()).First();
+
+                i++;
+            }
+
+        }
     }
+
 }
