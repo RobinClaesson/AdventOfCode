@@ -34,6 +34,7 @@ namespace Day6
 
             IO.Output(days.Sum() + newSpawn.Sum());
 
+            //Part 2 
             for (int i = 0; i < 176; i++)
             {
                 int spawnsAt = (currentDay + 2 + days.Length) % days.Length;
