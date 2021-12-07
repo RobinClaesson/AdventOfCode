@@ -33,11 +33,7 @@ namespace Day7
 
                     int diff = Math.Abs(input[i] - input[j]);
 
-                    //if(diff > 0)
-                    //for (int k = 1; k <= diff; k++)
-                    //    sum += k;
-
-                    sum += (diff * (diff + 1)) / 2;
+                    sum += (diff * (diff + 1)) / 2; //Aritmetic Sum
                 }
                 if (sum < part2)
                     part2 = sum;
