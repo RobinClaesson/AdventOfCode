@@ -38,7 +38,7 @@ namespace Day8
                 sub.Add(pattern[1].Except(pattern[0]).First(), 'a');
 
                 //c = the one that is in 1 and in a total of 8 patterns
-                //f = the one that is in 9 and a total of 9 patterns
+                //f = the one that is in 1 and a total of 9 patterns
                 foreach (char c in pattern[0])
                 {
                     int count = pattern.Count(p => p.Contains(c));
