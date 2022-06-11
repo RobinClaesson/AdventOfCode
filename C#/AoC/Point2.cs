@@ -22,7 +22,7 @@ namespace AoC
             X = xy;
             Y = xy;
         }
-        
+
         public Point2(int x, int y)
         {
             X = x;
@@ -50,7 +50,30 @@ namespace AoC
             return $"({X},{Y})";
         }
 
+        public override bool Equals(object obj)
+        {
+            Point2 other = (Point2)obj;
+
+            return other.X == this.X && other.Y == this.Y;
+        }
+
+        public Point2[] AdjacentPoints()
+        {
+            return new Point2[] {   new Point2(X-1, Y),
+                                        new Point2(X-1, Y-1),
+                                        new Point2(X, Y-1),
+                                        new Point2(X+1, Y-1),
+                                        new Point2(X+1, Y),
+                                        new Point2(X+1, Y+1),
+                                        new Point2(X, Y+1),
+                                        new Point2(X-1, Y+1),
+                                    };
+
+        }
+
         public static Point2 Zero { get { return new Point2(); } }
+
+
     }
 
 
