@@ -35,3 +35,4 @@ C:\Users\robin\GitHub\AdventOfCode\C#\2015\Day 12\obj\Debug\Day 12.csproj.CoreCo
 C:\Users\robin\GitHub\AdventOfCode\C#\2015\Day 12\obj\Debug\Day 12.csproj.CopyComplete
 C:\Users\robin\GitHub\AdventOfCode\C#\2015\Day 12\obj\Debug\Day 12.exe
 C:\Users\robin\GitHub\AdventOfCode\C#\2015\Day 12\obj\Debug\Day 12.pdb
+C:\Users\robin\GitHub\AdventOfCode\C#\2015\Day 12\obj\Debug\Day 12.csproj.SuggestedBindingRedirects.cache
