@@ -44,14 +44,7 @@ namespace AoC
 
                 if (File.Exists("Input.txt"))
                 {
-                    StreamReader reader = new StreamReader("Input.txt");
-
-                    string read;
-
-                    while ((read = reader.ReadLine()) != null)
-                        input.Add(read);
-
-                    reader.Close();
+                    input = File.ReadAllLines("Input.txt").ToList();
                 }
 
                 return input;
