@@ -2,11 +2,30 @@
 {
     public class Input
     {
+        public static bool TestMode
+        {
+            get => usedFile == TestFile;
+
+            set
+            {
+                if (value)
+                    usedFile = TestFile;
+                else
+                    usedFile = InputFile;
+            }
+
+        }
+
+        private const string InputFile = "Input.txt";
+        private const string TestFile = "Test.txt";
+
+        private static string usedFile = InputFile;
+
         public static string All
         {
             get
             {
-                return File.ReadAllText("Input.txt");
+                return File.ReadAllText(usedFile);
             }
         }
 
@@ -22,23 +41,27 @@
         {
             get
             {
-                return File.ReadLines("Input.txt").ToList();
+                return File.ReadLines(usedFile).ToList();
             }
         }
 
-        public static List<int> RowsAsIt
+        public static List<int> RowsAsInt
         {
             get
             {
-                return Rows.Where(r => r != "").Select(r => int.Parse(r)).ToList();
+                return File.ReadLines(usedFile).Where(r => r != "").Select(r => int.Parse(r)).ToList();
             }
         }
 
         public static List<string> Split(char separator)
         {
-            string input = All;
-
-            return input.Split(separator).ToList();
+            return All.Split(separator).ToList();
         }
+
+        public static List<int> SplitAsInt(char separator)
+        {
+            return All.Split(separator).Select(s => int.Parse(s)).ToList();
+        }
+
     }
 }

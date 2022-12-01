@@ -8,14 +8,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\AoC_DotNet6\AoC.csproj" />
+    <ProjectReference Include="..\AoC_DotNet6\AoC.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <None Update="Input.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Test.txt">
+	<None Update="Test.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
