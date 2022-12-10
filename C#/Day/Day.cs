@@ -1,4 +1,5 @@
 ﻿using AoC.IO;
 
-string input = Input.All;
+Input.TestMode = true;
+var input = Input.All;
 
