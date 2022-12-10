@@ -4,14 +4,14 @@
     {
         public static bool TestMode
         {
-            get => usedFile == TestFile;
+            get => fileToRead == TestFile;
 
             set
             {
                 if (value)
-                    usedFile = TestFile;
+                    fileToRead = TestFile;
                 else
-                    usedFile = InputFile;
+                    fileToRead = InputFile;
             }
 
         }
@@ -19,39 +19,19 @@
         private const string InputFile = "Input.txt";
         private const string TestFile = "Test.txt";
 
-        private static string usedFile = InputFile;
+        private static string fileToRead = InputFile;
 
-        public static string All
-        {
-            get
-            {
-                return File.ReadAllText(usedFile);
-            }
-        }
+        public static string All => File.ReadAllText(fileToRead);
 
-        public static int AllAsInt
-        {
-            get
-            {
-                return int.Parse(All);
-            }
-        }
+        public static int AllAsInt => int.Parse(All);
 
-        public static List<string> Rows
-        {
-            get
-            {
-                return File.ReadLines(usedFile).ToList();
-            }
-        }
+        public static List<string> Rows =>
+            File.ReadLines(fileToRead).ToList();
+        public static List<int> RowsAsInt =>
+            File.ReadLines(fileToRead).Where(r => r != "").Select(r => int.Parse(r)).ToList();
 
-        public static List<int> RowsAsInt
-        {
-            get
-            {
-                return File.ReadLines(usedFile).Where(r => r != "").Select(r => int.Parse(r)).ToList();
-            }
-        }
+        public static List<List<int>> IntGrid =>
+            File.ReadLines(fileToRead).Select(r => r.Select(c => int.Parse($"{c}")).ToList()).ToList();
 
         public static List<string> Split(char separator)
         {
@@ -62,6 +42,7 @@
         {
             return All.Split(separator).Select(s => int.Parse(s)).ToList();
         }
+
 
     }
 }
