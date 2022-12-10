@@ -1,47 +1,33 @@
-﻿using AoC;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using AoC.IO;
 
-namespace Day7
+var input = Input.SplitAsInt(',');
+
+input.Sort();
+
+int part1 = int.MaxValue;
+int part2 = int.MaxValue;
+for (int i = 0; i < input.Count; i++)
 {
-    class Day7
+    //Part 1
+    int sum = 0;
+    for (int j = 0; j < input.Count; j++)
+        sum += Math.Abs(input[i] - input[j]);
+
+    if (sum < part1)
+        part1 = sum;
+
+    //Part 2
+    sum = 0;
+    for (int j = 0; j < input.Count; j++)
     {
-        static void Main(string[] args)
-        {
-            List<int> input = IO.InputSplitted_Int(',');
-            input.Sort();
 
-            int part1 = int.MaxValue;
-            int part2 = int.MaxValue;
-            for (int i = 0; i < input.Count; i++)
-            {
-                //Part 1
-                int sum = 0;
-                for (int j = 0; j < input.Count; j++)
-                    sum += Math.Abs(input[i] - input[j]);
+        int diff = Math.Abs(input[i] - input[j]);
 
-                if (sum < part1)
-                    part1 = sum;
-
-                //Part 2
-                sum = 0;
-                for (int j = 0; j < input.Count; j++)
-                {
-
-                    int diff = Math.Abs(input[i] - input[j]);
-
-                    sum += (diff * (diff + 1)) / 2; //Aritmetic Sum
-                }
-                if (sum < part2)
-                    part2 = sum;
-            }
-
-            IO.Output(part1);
-            IO.Output(part2);
-            Console.ReadKey();
-        }
+        sum += (diff * (diff + 1)) / 2; //Aritmetic Sum
     }
+    if (sum < part2)
+        part2 = sum;
 }
+
+Output.Answer(part1);
+Output.Answer(part2);

@@ -14,5 +14,9 @@
             Console.WriteLine($"Answer {++outputs}: {answer}");
         }
 
+        public static void Answer(long answer)
+        {
+            Console.WriteLine($"Answer {++outputs}: {answer}");
+        }
     }
 }

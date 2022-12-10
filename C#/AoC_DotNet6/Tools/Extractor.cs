@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace AoC.Tools
 {
+    /// <summary>
+    /// Functions for extracting and formating data
+    /// </summary>
     public class Extractor
     {
         /// <summary>
