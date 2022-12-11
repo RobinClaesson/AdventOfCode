@@ -28,5 +28,10 @@ namespace AoC.IO
         {
             CopyAndPrint($"{answer}");
         }
+
+        public static void Answer(ulong answer)
+        {
+            CopyAndPrint($"{answer}");
+        }
     }
 }
