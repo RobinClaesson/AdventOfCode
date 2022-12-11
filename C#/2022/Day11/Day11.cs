@@ -93,13 +93,13 @@ for (int r = 1; r <= 10000; r++)
         }
     }
 
-    if (logAt.Contains(r))
-    {
-        Console.Write($"Round {r}:\t\t [");
-        foreach (var s in inspections)
-            Console.Write($"{s}, ");
-        Console.WriteLine("]");
-    }
+    //if (logAt.Contains(r))
+    //{
+    //    Console.Write($"Round {r}:\t\t [");
+    //    foreach (var s in inspections)
+    //        Console.Write($"{s}, ");
+    //    Console.WriteLine("]");
+    //}
 }
 
 var p2 = inspections.OrderByDescending(i => i).ToArray();
