@@ -1,55 +1,74 @@
 ﻿using AoC.IO;
+using System.Text;
+using System.Text.RegularExpressions;
 
+Input.TestMode = true;
 var input = Input.Rows;
 
-Dictionary<string, string> rules = new Dictionary<string, string>();
-
 var polymer = input[0];
+input.RemoveRange(0, 2);
 
-input.RemoveAt(0);
-input.RemoveAt(0);
-
+Dictionary<string, string> rules = new Dictionary<string, string>();
 foreach (var row in input)
 {
-    var rule = row.Replace(" -> ", ".").Split('.');
-    rules.Add(rule[0], rule[1]);
+    var s = row.Split(" -> ");
+    rules.Add(s[0], s[1]);
 }
 
-for (int step = 0; step < 10; step++)
-{
-    var newPolymer = string.Empty;
-    for (int i = 0; i < polymer.Length - 1; i++)
-    {
-        newPolymer += polymer[i];
+var nextPolymer = new StringBuilder();
+var matches = new List<int>();
 
-        var pair = polymer.Substring(i, 2);
-        if (rules.ContainsKey(pair))
-            newPolymer += rules[pair];
+for (var steps = 0; steps < 10; steps++)
+{
+    
+    foreach(var key in rules.Keys)
+    {
+       
     }
 
-    newPolymer += polymer.Last();
 
-    polymer = newPolymer;
-}
-
-var counts = polymer.GroupBy(c => c).OrderByDescending(g => g.Count());
-Output.Answer(counts.First().Count() - counts.Last().Count());
-
-for (int step = 0; step < 30; step++)
-{
-    var newPolymer = string.Empty;
-
-    for (int i = 0; i < polymer.Length - 1; i++)
+    foreach (var match in matches)
     {
-        newPolymer += polymer[i];
-
-        var pair = polymer.Substring(i, 2);
-        if (rules.ContainsKey(pair))
-            newPolymer += rules[pair];
+        polymer = polymer.Insert(match.Index + 1, rules[match.Value]);
     }
-
-    newPolymer += polymer.Last();
-    polymer = newPolymer;
+    matches.Clear();
+    //for (var i = 0; i < polymer.Length - 1; i++)
+    //{
+    //    var sub = polymer.Substring(i, 2);
+    //    if (rules.ContainsKey(sub))
+    //        nextPolymer.Append(rules[sub]);
+    //    else
+    //        nextPolymer.Append(polymer[i]);
+    //}
+    //nextPolymer.Append(polymer.Last());
+    //polymer = nextPolymer.ToString();
+    //nextPolymer.Clear();
 }
-counts = polymer.GroupBy(c => c).OrderByDescending(g => g.Count());
-Output.Answer(counts.First().Count() - counts.Last().Count());
+
+var groups = polymer.GroupBy(c => c);
+var most = groups.Max(g => g.Count());
+var least = groups.Min(g => g.Count());
+
+Output.Answer(most - least);
+
+//for (var steps = 0; steps < 30; steps++)
+//{
+
+//    for (var i = 0; i < polymer.Length - 1; i++)
+//    {
+//        var sub = polymer.Substring(i, 2);
+//        if (rules.ContainsKey(sub))
+//            nextPolymer.Append(rules[sub]);
+//        else
+//            nextPolymer.Append(polymer[i]);
+//    }
+//    nextPolymer.Append(polymer.Last());
+//    polymer = nextPolymer.ToString();
+//    nextPolymer.Clear();
+//}
+
+//groups = polymer.GroupBy(c => c);
+//most = groups.Max(g => g.Count());
+//least = groups.Min(g => g.Count());
+
+//Output.Answer(most - least);

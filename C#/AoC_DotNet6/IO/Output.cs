@@ -1,8 +1,10 @@
-﻿namespace AoC.IO
+﻿using System.Numerics;
+
+namespace AoC.IO
 {
     public class Output
     {
-        private static int outputs = 0; 
+        private static int outputs = 0;
 
         public static void Answer(string answer)
         {
