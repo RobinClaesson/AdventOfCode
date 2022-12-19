@@ -6,32 +6,15 @@ namespace AoC.IO
     {
         private static int outputs = 0;
 
-        private static void CopyAndPrint(string answer)
+        public static void Answer<T>(T answer)
         {
-            Console.WriteLine($"Answer {++outputs}: {answer}");
+            string text = $"Answer {++outputs}: {answer}";
+            Console.WriteLine(text);
 
             if (!Input.TestMode)
-                TextCopy.ClipboardService.SetText(answer);
+                TextCopy.ClipboardService.SetText(text);
         }
 
-        public static void Answer(string answer)
-        {
-            CopyAndPrint(answer);
-        }
-
-        public static void Answer(int answer)
-        {
-            CopyAndPrint($"{answer}");
-        }
-
-        public static void Answer(long answer)
-        {
-            CopyAndPrint($"{answer}");
-        }
-
-        public static void Answer(ulong answer)
-        {
-            CopyAndPrint($"{answer}");
-        }
+        
     }
 }
