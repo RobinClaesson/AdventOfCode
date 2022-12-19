@@ -24,5 +24,14 @@ namespace AoC.Tools
                                         new Vector2(point.X-1, point.Y+1),
                                     };
         }
+
+        public static Vector2[] FourDirAdjecentPoints(Vector2 point)
+        {
+            return new Vector2[] {   new Vector2(point.X-1, point.Y),
+                                        new Vector2(point.X, point.Y-1),
+                                        new Vector2(point.X+1, point.Y),
+                                        new Vector2(point.X, point.Y+1),
+                                    };
+        }
     }
 }
