@@ -8,11 +8,10 @@ namespace AoC.IO
 
         public static void Answer<T>(T answer)
         {
-            string text = $"Answer {++outputs}: {answer}";
-            Console.WriteLine(text);
+            Console.WriteLine($"Answer {++outputs}: {answer}");
 
             if (!Input.TestMode)
-                TextCopy.ClipboardService.SetText(text);
+                TextCopy.ClipboardService.SetText($"{answer}");
         }
 
         
