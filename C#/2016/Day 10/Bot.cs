@@ -1,16 +1,8 @@
-﻿using Microsoft.SqlServer.Server;
-using Microsoft.Win32.SafeHandles;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection.Emit;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Day_10
+﻿namespace Day_10
 {
-    class Bot
+    internal class Bot
     {
+
         List<int> chips = new List<int>();
         string lowOutputPlace = "", highOutputPlace = "";
 
