@@ -39,9 +39,14 @@
         public static List<string> Split(char separator)
             => All.Split(separator).ToList();
 
-
         public static List<string[]> RowsSplitted(char separator)
             => File.ReadLines(fileToRead).Select(s => s.Split(separator)).ToList();
+
+        public static List<int[]>RowsSplittedAsInt(char separator)
+            => File.ReadLines(fileToRead).Select(s => s.Split(separator)
+                                        .Where(s => s != string.Empty)
+                                        .Select(s => int.Parse(s)).ToArray())
+                                        .ToList();
 
         public static List<int> SplitAsInt(char separator)
             => All.Split(separator).Select(s => int.Parse(s)).ToList();
