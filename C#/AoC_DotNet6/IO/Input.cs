@@ -23,33 +23,29 @@
 
         public static string All => File.ReadAllText(fileToRead);
 
-        public static int AllAsInt => int.Parse(All);
+        public static int AllAsInt
+            => int.Parse(All);
 
-        public static List<string> Rows =>
-            File.ReadLines(fileToRead).ToList();
+        public static List<string> Rows 
+            => File.ReadLines(fileToRead).ToList();
 
-        public static List<int> RowsAsInt =>
-            File.ReadLines(fileToRead).Where(r => r != "").Select(r => int.Parse(r)).ToList();
-  
+        public static List<int> RowsAsInt
+            => File.ReadLines(fileToRead).Where(r => r != "").Select(r => int.Parse(r)).ToList();
 
-        public static List<List<int>> IntGrid =>
-            File.ReadLines(fileToRead).Select(r => r.Select(c => int.Parse($"{c}")).ToList()).ToList();
+
+        public static List<List<int>> IntGrid 
+            => File.ReadLines(fileToRead).Select(r => r.Select(c => int.Parse($"{c}")).ToList()).ToList();
 
         public static List<string> Split(char separator)
-        {
-            return All.Split(separator).ToList();
-        }
+            => All.Split(separator).ToList();
 
-        public static List<string[]> RowsSplitted(char separator) 
-        {
-            return File.ReadLines(fileToRead).Select(s => s.Split(separator)).ToList();
-        }
+
+        public static List<string[]> RowsSplitted(char separator)
+            => File.ReadLines(fileToRead).Select(s => s.Split(separator)).ToList();
 
         public static List<int> SplitAsInt(char separator)
-        {
-            return All.Split(separator).Select(s => int.Parse(s)).ToList();
-        }
-
+            => All.Split(separator).Select(s => int.Parse(s)).ToList();
+        
 
     }
 }
