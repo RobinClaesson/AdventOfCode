@@ -1,10 +1,14 @@
 ﻿using System.Text;
+using System.Linq;
 
 namespace AoC2019Libraries
 {
     public class IntCodeComputer
     {
         private List<int> program = new List<int>();
+        private Queue<int> inputs = new Queue<int>();
+        private Queue<int> outputs = new Queue<int>();
+
         private int instructionPointer = 0;
 
         public IntCodeComputer(IEnumerable<int> program)
@@ -28,6 +32,15 @@ namespace AoC2019Libraries
         public override string ToString()
             => string.Join(",", program);
 
+        public void AddInput(int input)
+            => inputs.Enqueue(input);
+
+        public void AddInputs(IEnumerable<int> inputs)
+            => inputs.ToList().ForEach(this.inputs.Enqueue);
+
+        public int GetOutput()
+            => outputs.Dequeue();
+
         public void Run()
         {
             while (program[instructionPointer] != 99)
@@ -46,6 +59,12 @@ namespace AoC2019Libraries
                         break;
                     case 2:
                         Opcode2(paramModes);
+                        break;
+                    case 3:
+                        OpCode3();
+                        break;
+                    case 4:
+                        OpCode4(paramModes);
                         break;
                     default:
                         throw new Exception("Invalid opcode");
@@ -83,6 +102,20 @@ namespace AoC2019Libraries
             var to = program[instructionPointer + 3]; //Parameters that an instruction writes to will never be in immediate mode
             program[to] = a * b;
             instructionPointer += 4;
+        }
+
+        private void OpCode3()
+        {
+            var to = program[instructionPointer + 1];
+            program[to] = inputs.Dequeue();
+            instructionPointer += 2;
+        }
+
+        private void OpCode4(int[] paramModes)
+        {
+            var output = GetParameterValue(0, paramModes);
+            outputs.Enqueue(output);
+            instructionPointer += 2;
         }
     }
 }
