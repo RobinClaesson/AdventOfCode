@@ -32,13 +32,20 @@ namespace AoC2019Libraries
         {
             while (program[instructionPointer] != 99)
             {
-                switch (program[instructionPointer])
+                var opcode = program[instructionPointer] % 100;
+                var paramModes = (program[instructionPointer] / 100).ToString()
+                                                                    .PadLeft(3, '0')
+                                                                    .Select(c => int.Parse($"{c}"))
+                                                                    .Reverse()
+                                                                    .ToArray();
+
+                switch (opcode)
                 {
                     case 1:
-                        Opcode1();
+                        Opcode1(paramModes);
                         break;
                     case 2:
-                        Opcode2();
+                        Opcode2(paramModes);
                         break;
                     default:
                         throw new Exception("Invalid opcode");
@@ -47,21 +54,34 @@ namespace AoC2019Libraries
             }
         }
 
-        private void Opcode1()
+        private int GetParameterValue(int paramIndex, int[] paramModes)
         {
-            var a = program[instructionPointer + 1];
-            var b = program[instructionPointer + 2];
-            var to = program[instructionPointer + 3];
-            program[to] = program[a] + program[b];
+            var param = program[instructionPointer + paramIndex + 1];
+            if (paramModes[paramIndex] == 0) // position mode
+            {
+                return program[param];
+            }
+            else // immediate mode
+            {
+                return param;
+            }
+        }
+
+        private void Opcode1(int[] paramModes)
+        {
+            var a = GetParameterValue(0, paramModes);
+            var b = GetParameterValue(1, paramModes);
+            var to = program[instructionPointer + 3]; //Parameters that an instruction writes to will never be in immediate mode
+            program[to] = a + b;
             instructionPointer += 4;
         }
 
-        private void Opcode2()
+        private void Opcode2(int[] paramModes)
         {
-            var a = program[instructionPointer + 1];
-            var b = program[instructionPointer + 2];
-            var to = program[instructionPointer + 3];
-            program[to] = program[a] * program[b];
+            var a = GetParameterValue(0, paramModes);
+            var b = GetParameterValue(1, paramModes);
+            var to = program[instructionPointer + 3]; //Parameters that an instruction writes to will never be in immediate mode
+            program[to] = a * b;
             instructionPointer += 4;
         }
     }
