@@ -53,7 +53,19 @@
                 .Select(s => s.Split(separator))
                 .ToList();
 
+        public static List<string[]> RowsSplitted(string separator)
+            => File.ReadLines(fileToRead)
+                .Select(s => s.Split(separator))
+                .ToList();
+
         public static List<int[]>RowsSplittedAsInt(char separator)
+            => File.ReadLines(fileToRead)
+                .Select(s => s.Split(separator)
+                .Where(s => s != string.Empty)
+                .Select(s => int.Parse(s)).ToArray())
+                .ToList();
+
+        public static List<int[]> RowsSplittedAsInt(string separator)
             => File.ReadLines(fileToRead)
                 .Select(s => s.Split(separator)
                 .Where(s => s != string.Empty)
