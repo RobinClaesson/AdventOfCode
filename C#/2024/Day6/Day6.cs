@@ -35,31 +35,23 @@ do
 Output.Answer(visited.Count);
 
 
-//Naive solution but it works in ~1 min
+//Naive solution but it works in under 10 sec on my machine
+//#Bruteforce
 var part2 = 0;
-var total = input.Count * input[0].Length;
-for (int y = 0; y < input.Count; y++)
+Parallel.For(0, input.Count, y =>
 {
     for (int x = 0; x < input[y].Length; x++)
     {
         if (input[y][x] == '#')
             continue;
-
-        Console.CursorLeft = 0;
-        var progress = y * input[y].Length + x;
-        if (progress % 100 == 0)
-            Console.Write($"Part2 progress: {progress}/{total}      ");
-
-
         guardPos = new Vector2(guardX, guardY);
-
         var m = GetInputCopy();
         m[y][x] = '#';
         if (IsCycle(m, guardPos))
             part2++;
     }
-}
-Console.WriteLine();
+});
+
 Output.Answer(part2);
 
 static bool IsCycle(List<char[]> map, Vector2 pos)
