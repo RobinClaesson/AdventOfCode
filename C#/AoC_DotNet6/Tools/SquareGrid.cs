@@ -14,24 +14,39 @@ namespace AoC.Tools
         /// <returns>Array of Vector2 with the adjecent points</returns>
         public static Vector2[] AdjacentPoints(Vector2 point)
         {
-            return new Vector2[] {   new Vector2(point.X-1, point.Y),
-                                        new Vector2(point.X-1, point.Y-1),
-                                        new Vector2(point.X, point.Y-1),
-                                        new Vector2(point.X+1,point.Y-1),
-                                        new Vector2(point.X+1, point.Y),
-                                        new Vector2(point.X+1, point.Y+1),
-                                        new Vector2(point.X, point.Y+1),
-                                        new Vector2(point.X-1, point.Y+1),
-                                    };
+            return new Vector2[]
+            {
+                new Vector2(point.X - 1, point.Y),
+                new Vector2(point.X - 1, point.Y - 1),
+                new Vector2(point.X, point.Y - 1),
+                new Vector2(point.X + 1, point.Y - 1),
+                new Vector2(point.X + 1, point.Y),
+                new Vector2(point.X + 1, point.Y + 1),
+                new Vector2(point.X, point.Y + 1),
+                new Vector2(point.X - 1, point.Y + 1),
+            };
         }
 
+        /// <summary>
+        /// Gets the 4 adjacent points of a vector (W, N, E, S)
+        /// </summary>
+        /// <param name="point">Vector2 to serach around (Expecting integer values)</param>
+        /// <returns>Array of Vector2 with the adjecent points</returns>
         public static Vector2[] FourDirAdjecentPoints(Vector2 point)
         {
-            return new Vector2[] {   new Vector2(point.X-1, point.Y),
-                                        new Vector2(point.X, point.Y-1),
-                                        new Vector2(point.X+1, point.Y),
-                                        new Vector2(point.X, point.Y+1),
-                                    };
+            return new Vector2[]
+            {
+                new Vector2(point.X - 1, point.Y),
+                new Vector2(point.X, point.Y - 1),
+                new Vector2(point.X + 1, point.Y),
+                new Vector2(point.X, point.Y + 1),
+            };
         }
+
+        public static Vector2[] AllPointsInGrid(int width, int height)
+            => Enumerable.Range(0, width)
+                .SelectMany(x => Enumerable.Range(0, height)
+                    .Select(i => new Vector2(x * width, i * height)))
+                .ToArray();
     }
 }
