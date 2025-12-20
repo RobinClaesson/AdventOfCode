@@ -13,7 +13,6 @@
                 else
                     fileToRead = InputFile;
             }
-
         }
 
         private const string InputFile = "Input.txt";
@@ -21,7 +20,7 @@
 
         private static string fileToRead = InputFile;
 
-        public static string All 
+        public static string All
             => File.ReadAllText(fileToRead);
 
         public static int AllAsInt
@@ -30,7 +29,7 @@
         public static List<int> AllCharsAsInts
             => All.Select(c => c - '0').ToList();
 
-        public static List<string> Rows 
+        public static List<string> Rows
             => File.ReadLines(fileToRead)
                 .ToList();
 
@@ -46,7 +45,7 @@
                 .Select(r => r.Select(c => int.Parse($"{c}")).ToList())
                 .ToList();
 
-        public static List<List<int>> IntGrid 
+        public static List<List<int>> IntGrid
             => File.ReadLines(fileToRead)
                 .Select(r => r.Select(c => int.Parse($"{c}")).ToList())
                 .ToList();
@@ -66,18 +65,32 @@
                 .Select(s => s.Split(separator))
                 .ToList();
 
-        public static List<int[]>RowsSplittedAsInt(char separator)
+        public static List<int[]> RowsSplittedAsInt(char separator)
             => File.ReadLines(fileToRead)
                 .Select(s => s.Split(separator)
-                .Where(s => s != string.Empty)
-                .Select(s => int.Parse(s)).ToArray())
+                    .Where(s => s != string.Empty)
+                    .Select(s => int.Parse(s)).ToArray())
                 .ToList();
 
         public static List<int[]> RowsSplittedAsInt(string separator)
             => File.ReadLines(fileToRead)
                 .Select(s => s.Split(separator)
-                .Where(s => s != string.Empty)
-                .Select(s => int.Parse(s)).ToArray())
+                    .Where(s => s != string.Empty)
+                    .Select(s => int.Parse(s)).ToArray())
+                .ToList();
+
+        public static List<long[]> RowsSplittedAsLong(char separator)
+            => File.ReadLines(fileToRead)
+                .Select(s => s.Split(separator)
+                    .Where(s => s != string.Empty)
+                    .Select(s => long.Parse(s)).ToArray())
+                .ToList();
+
+        public static List<long[]> RowsSplittedAsLong(string separator)
+            => File.ReadLines(fileToRead)
+                .Select(s => s.Split(separator)
+                    .Where(s => s != string.Empty)
+                    .Select(s => long.Parse(s)).ToArray())
                 .ToList();
 
         public static List<int> SplitAsInt(char separator)
