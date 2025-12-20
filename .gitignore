@@ -415,3 +415,4 @@ FodyWeavers.xsd
 # JetBrains Rider
 .idea/
 *.sln.iml
+C\#/2025/global.json
